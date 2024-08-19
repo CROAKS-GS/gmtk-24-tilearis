@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca4wwnljs3l2d"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5ce7o"]
+[ext_resource type="PackedScene" uid="uid://cnlc6qrhioe10" path="res://game_camera.tscn" id="1_ixbs6"]
+[ext_resource type="PackedScene" uid="uid://j75x4uy5uyk4" path="res://tile.tscn" id="2_qpnga"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5ce7o")
+
+[node name="GameCamera" parent="." instance=ExtResource("1_ixbs6")]
+
+[node name="Tile" parent="." instance=ExtResource("2_qpnga")]
+
+[connection signal="zoom_in" from="." to="GameCamera" method="_on_main_zoom_in"]
+[connection signal="zoom_out" from="." to="GameCamera" method="_on_main_zoom_out"]
