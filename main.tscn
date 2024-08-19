@@ -10,6 +10,3 @@ script = ExtResource("1_5ce7o")
 [node name="GameCamera" parent="." instance=ExtResource("1_ixbs6")]
 
 [node name="Tile" parent="." instance=ExtResource("2_qpnga")]
-
-[connection signal="zoom_in" from="." to="GameCamera" method="_on_main_zoom_in"]
-[connection signal="zoom_out" from="." to="GameCamera" method="_on_main_zoom_out"]

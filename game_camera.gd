@@ -17,14 +17,8 @@ func _set_zoom_level(num: float) -> void :
 	tween.tween_property(self, "zoom", Vector2(_zoom_level, _zoom_level), zoom_duration)
 	tween.play()
 
-func _unhandled_input(event):
+func _input(event):
 	if Input.is_action_pressed("zoom_in"):
-		_zoom_level -= zoom_factor
-	if Input.is_action_pressed("zoom_out"):
 		_zoom_level += zoom_factor
-
-#func _process(delta):
-	#if Input.is_action_pressed("zoom_in"):
-		#_zoom_level -= zoom_factor
-	#if Input.is_action_pressed("zoom_out"):
-		#_zoom_level += zoom_factor
+	if Input.is_action_pressed("zoom_out"):
+		_zoom_level -= zoom_factor
