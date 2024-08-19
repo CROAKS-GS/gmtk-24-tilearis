@@ -18,7 +18,7 @@ func _set_zoom_level(num: float) -> void :
 	tween.play()
 
 func _input(event):
-	if Input.is_action_pressed("zoom_in"):
+	if Input.is_action_just_released("zoom_in"):
 		_zoom_level += zoom_factor
-	if Input.is_action_pressed("zoom_out"):
+	if Input.is_action_just_released("zoom_out"):
 		_zoom_level -= zoom_factor
